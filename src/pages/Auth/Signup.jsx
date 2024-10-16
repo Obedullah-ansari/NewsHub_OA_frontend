@@ -26,7 +26,7 @@ const Signup = () => {
     setIsLogin(!isLogin);
     setFormData({ name: "", email: "", password: "", passwordConfirmed: "" });
     setError(""); // Clear any previous error when toggling form
-    setforgeterror("")
+    setforgeterror("");
   };
 
   const handleChange = (e) => {
@@ -178,22 +178,24 @@ const Signup = () => {
               </div>
 
               <form onSubmit={handleSubmit} className={Styles.form}>
-                {error && (
-                  <p
-                    style={{ fontSize: "1rem", color: "red" }}
-                    className={Styles.errorMessage}
-                  >
-                    {error}
-                  </p>
-                )}
-                {forgeterror && (
+                {forgeterror ? (
                   <p
                     style={{ fontSize: "1rem", color: "red" }}
                     className={Styles.forgeterrorMessage}
                   >
                     {forgeterror}
                   </p>
+                ) : (
+                  error && (
+                    <p
+                      style={{ fontSize: "1rem", color: "red" }}
+                      className={Styles.errorMessage}
+                    >
+                      {error}
+                    </p>
+                  )
                 )}
+
                 {!isLogin && (
                   <input
                     placeholder="Name"

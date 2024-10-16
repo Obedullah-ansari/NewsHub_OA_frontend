@@ -5,6 +5,18 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+}
+.containertwo{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
+  background:linear-gradient(60deg,#18181a,#39104e );
+ 
 }
 .backdiv {
   width: 50%;
@@ -82,11 +94,13 @@ input {
   font-size: 1rem;
   font-weight: 500;
   border-radius: 1rem;
+  box-shadow: 1px 1px 20px 1px rgb(221, 184, 255);
 }
 .submitBtn{
   border: none;
   background: none;
-  background-color: rgb(144, 97, 209);
+  background-color: rgb(180, 133, 245);
+  box-shadow: 1px 1px 20px 1px rgb(191, 123, 255);
   padding: 4%;
   font-size: 1.1rem;
   font-weight: 550;
@@ -109,27 +123,30 @@ input {
 
 
 @media (max-width: 600px) {
-  .container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1%;
 
-  }
   .togglediv{
     height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    border-radius: 2rem;
+    background:linear-gradient(270deg,#d2b4de,#ebdef0 );
+
   }
   .toggleBtn{
     width: 97%;
+    background: none;
+    box-shadow: none;
   }
-  .togglediv{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .animatebtn{
+    height: 6rem;
+    width: 4.2rem;
+    border-radius: 2rem;
+    transform: rotate(90deg);
   }
+
+  
  
   .backdiv{
     width: 100%;
