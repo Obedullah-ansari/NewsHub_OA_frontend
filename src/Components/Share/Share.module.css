@@ -1,0 +1,15 @@
+.footerimg{
+    width: 2.2rem;
+    cursor: pointer;
+    border-radius: 2.4rem;
+    box-shadow: 1px 1px 10px 1px rgb(255, 255, 255);
+}
+.icondiv{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap:10%;
+    margin-top: 0.5%;
+}

@@ -1,0 +1,179 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.backdiv {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+   border-radius: 0.7rem;
+   overflow: hidden;
+   position: fixed;
+}
+
+.infotab {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:linear-gradient(60deg,#a3e4d7,#8e44ad );
+  color:#212f3c ;
+   z-index: 2;
+ 
+}
+.infotext{
+  height: 50%;
+  width: 100%;
+  padding: 5%;
+  text-align: center;
+}
+.infotext img{
+  width: 100%;
+  height: 80%;
+  border-radius: 0.6rem;
+}
+.infotab h1{
+ font-size: 2.5rem;
+ padding: 3%;
+} 
+.infotab p{
+  font-size: 1.2rem;
+ } 
+.login_singup {
+  height: 100%;
+  width: 50%;
+  color: black;
+  background:linear-gradient(270deg,#d2b4de,#ebdef0 );
+
+}
+.infobar {
+  height: 10%;
+  text-align: center;
+  padding: 1%;
+}
+.form {
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  gap: 1rem;
+}
+input {
+  width: 67%;
+  height: 10%;
+  padding: 2%;
+  border-radius: 0.3rem;
+  border: none;
+}
+.toggleBtn{
+  border: none;
+  background: none;
+  background-color: #d2b4de;
+  padding: 4%;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+.submitBtn{
+  border: none;
+  background: none;
+  background-color: rgb(144, 97, 209);
+  padding: 4%;
+  font-size: 1.1rem;
+  font-weight: 550;
+  border-radius: 1rem;
+}
+.forgetpassowrd{
+  color: rgb(150, 83, 83);
+  cursor: pointer;
+  font-size: 1rem;
+
+}
+.forgetpassowrd:hover{
+  scale:1.1;
+  transition: 0.05s;
+}
+.forgeterrorMessage{
+  color : rgb(152, 34, 34) !important
+  
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+
+  }
+  .togglediv{
+    height: 10%;
+  }
+  .toggleBtn{
+    width: 97%;
+  }
+  .togglediv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .backdiv{
+    width: 100%;
+    height: 90%;
+    position: relative;
+  }
+  .singuptab{
+    height: 70%;
+    width: 95%;
+    color: black;
+    background:linear-gradient(270deg,#d2b4de,#ebdef0 );
+    border-radius: 0.5rem;
+  }
+  .logintab {
+    position: absolute;
+    height: 70%;
+    width: 95%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:linear-gradient(60deg,#a3e4d7,#8e44ad );
+    color:#212f3c ;
+     z-index: 2;
+
+  }
+  .loginform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    gap:5%;
+    height: 100%;
+    width: 100%;
+  }
+  input{
+    height: 13%;
+  }
+  input::placeholder {
+    color: #232323;
+    font-size: 1rem;
+  }
+  .particle{
+    display: none;
+  }
+
+}

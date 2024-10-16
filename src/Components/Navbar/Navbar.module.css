@@ -1,0 +1,329 @@
+.navcontiner {
+  height: 9%;
+  width: 100%;
+  background: linear-gradient(60deg, #1f2b3f, #1d2025);
+  position: relative;
+  z-index: 1;
+}
+
+.navbody {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8%;
+  position: relative;
+  z-index: 1;
+  padding-left: 1%;
+}
+a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: rgb(128, 230, 206);
+  font-weight: 500;
+}
+.userinfoconatiner {
+  height: 100vh;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userinfo {
+  height: 100vh;
+  background: linear-gradient(30deg, #135752, #83dda8);
+  width: 25%;
+  position: absolute;
+  z-index: 2;
+  top: 0%;
+  left: 75%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.infoclosebnt {
+  position: absolute;
+  width: 2rem;
+  border-radius: 2rem;
+  top: 5%;
+  left: 97.5%;
+  z-index: 3;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.userinfoclosebnt {
+  position: absolute;
+  width: 3.5rem;
+  border-radius: 2rem;
+  top: 5%;
+  left: 96%;
+  z-index: 3;
+  cursor: pointer;
+  box-shadow: 1px 1px 25px 1px rgb(204, 95, 255);
+}
+
+.userdetail {
+  height: 60%;
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.aboutuser {
+  width: 100%;
+  height: 90%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 3%;
+  padding: 1%;
+}
+.aboutuser span {
+  font-weight: 500;
+}
+.sharediv {
+  width: 100%;
+  height: 15%;
+}
+.closebar {
+  width: 100%;
+  padding: 2%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.smallnavabardata {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding-top: 45%;
+  height: 90%;
+}
+.smallnavabardata a {
+  font-size: 1.3rem;
+}
+.smallnavbar {
+  display: none;
+}
+.sidebtn {
+  display: none;
+  width: 3.3rem;
+  position: fixed;
+}
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  z-index: 5;
+}
+.uerimg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 40%;
+  width: 100%;
+}
+.userprofileimg {
+  width: 50%;
+  height: 55%;
+  border-radius: 50%;
+  box-shadow: 1px 1px 20px 2px rgb(8, 255, 255);
+}
+.nametag {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #0c2724;
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 500;
+}
+
+.cropContainer {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Adjust this height as needed */
+  background: #191919;
+  z-index: 3;
+}
+
+.cropControls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+/* ....................................................................................................................... */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 65%;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 2rem;
+  font-size: 2rem;
+  color: white;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.customFileLabel img {
+  width: 2.3rem;
+  cursor: pointer;
+  position: relative;
+  left: 3rem;
+  top: -2rem;
+}
+.userimginfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 1%;
+  gap: 5%;
+  height: 10%;
+}
+.logout {
+  color: rgba(252, 16, 106, 0.915);
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.mapContainer {
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.updateimgbtn {
+  background: rgb(76, 149, 252);
+  border: none;
+  padding: 3%;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 0.6rem;
+}
+.updateimgbtn:hover {
+  background-color: rgb(84, 168, 196);
+}
+
+.shregif {
+  height: 50%;
+  width: 100%;
+}
+.shregif img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .navbody {
+    display: none;
+  }
+  .userinfo {
+    height: 100vh;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0%;
+    left: 0.1%;
+    position: fixed;
+    border-radius: 0.3rem;
+  }
+  .userinfoclosebnt {
+    top: 0.5%;
+    left: 83%;
+    z-index: 3;
+  }
+  .infoclosebnt {
+    top: 2%;
+    left: 92%;
+    z-index: 3;
+  }
+  .smallnavbar {
+    display: block;
+    height: 100vh;
+    position: fixed;
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 88, 91);
+    top: 0;
+    border-radius: 0.5rem;
+    z-index: 3;
+  }
+  .sidebtn {
+    display: inline-block;
+    width: 2.8rem;
+  }
+  .userprofileimg {
+    height: 68%;
+  }
+
+  .modalContent {
+    width: 99%;
+    height: 65%;
+    gap: 0.5rem;
+    position: relative;
+  }
+  
+}
+
+@media (min-height: 700px) {
+  .userprofileimg {
+    height: 55%;
+  }
+  .navcontiner {
+    height: 7%;
+    width: 100%;
+   
+  }
+
+}

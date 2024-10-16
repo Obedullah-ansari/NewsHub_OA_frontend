@@ -1,0 +1,101 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling beyond sections */
+}
+
+body {
+  touch-action: none;
+  scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+  overflow-y: scroll; /* Allow vertical scrolling */
+  scroll-behavior: smooth; /* Smooth scroll between sections */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.landingpage_2 {
+  overflow: hidden; /* Prevent overflow in landing page */
+}
+
+section {
+  height: 100vh; /* Each section takes up the full viewport height */
+  width: 100%;
+  background: linear-gradient(60deg, #0c1119, #1d2025);
+  scroll-snap-align: start; /* Snap to the start of each section */
+  overflow: hidden;
+}
+
+.bg-body-tertiary {
+  background: linear-gradient(60deg, #1f2b3f, #1d2025) !important;
+}
+
+.navbar-nav{
+  display: flex !important;
+  align-items: center !important;
+}
+
+.nav-link {
+  margin-left: 4rem;
+  color: #a3e4d7 !important;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.navbar-brand {
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.nav-link:hover {
+  scale: 1.2;
+}
+
+.slick-list {
+  height: 100%; 
+}
+.slick-slider{
+  padding: 0 10px;
+
+}
+.slick-track{
+  height: 100%;
+ 
+}
+.slick-slide div{
+  margin: 0 10px;
+  
+}
+.slick-dots{
+display: none !important;
+}
+
+
+@media (max-width: 600px) {
+  #tsparticles {
+    display: none;
+  }
+
+  .slick-slide div{
+    margin: 0 10px;
+    /* overflow: hidden !important; */
+    
+  }
+  .navbar-nav{
+    display: flex !important;
+    align-items: start !important;
+    justify-content: center !important;
+  }
+   
+  
+}
+

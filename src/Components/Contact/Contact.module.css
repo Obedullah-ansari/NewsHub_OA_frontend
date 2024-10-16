@@ -1,0 +1,176 @@
+.maindiv {
+  height: 100vh;
+  width: 100%;
+}
+.submaindiv {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footdiv {
+  height: 15%;
+  width: 100%;
+  
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(181, 182, 234);
+  font-size: 1rem;
+  gap: 0px;
+  font-weight: 550;
+}
+.mywork{
+    height: 100%;
+    width: 50%;
+    gap: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(181, 182, 234);
+
+}
+.topfeeds {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.gifdiv{
+  height: 45%;
+  width: 75%;
+  border-radius: 0.5rem;
+}
+.topnewsconatiner{
+  height: 60%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+p {
+  margin: 0px !important;
+}
+.topfeadsheadlines{
+  height: 40%;
+}
+.toplist{
+  list-style: decimal;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+
+}
+.sliderbtn{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sliderbtn img{
+  width: 5rem;
+  cursor: pointer;
+}
+.subtopdiv{
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+}
+.topnewsheadlines{
+  height: 15%;
+  width: 100%;
+  text-align: center;
+
+}
+.topnewsheadlines h1{
+  font-size: 3rem;
+  color: rgb(88, 196, 161);
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+}
+.subcontainertop{
+  height: 70%;
+  width: 100%;
+
+
+}
+.connectbtn{
+  padding: 3%;
+  background: rgb(232, 232, 232);
+  text-align: center;
+  color: black;
+  border-radius: 0.3rem;
+  box-shadow:  1px 1px 9px 1px white;
+  width: 20%;
+}
+.connectbtn:hover{
+  box-shadow:  .5px 1.5px 20px 1.5px white;
+}
+
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 10px 1px white;
+} 
+
+@media screen and (max-width: 768px) {
+.mywork{
+  display: none;
+}
+.topfeeds{
+ width: 100%;
+ height: 90%;
+}
+.footdiv {
+  height: 10%;
+  width: 100%;
+   
+  text-align: center;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(181, 182, 234);
+  font-size: 0.9rem;
+  gap: 0px;
+  font-weight: 400;
+}
+.topnewsheadlines{
+  height: 10%;
+}
+.topnewsheadlines h1{
+  font-size: 2rem;
+  color: rgb(88, 196, 161);
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+}
+.subcontainertop{
+  height: 90%;
+  width: 100%;
+}
+.submaindiv {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+}

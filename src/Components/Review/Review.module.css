@@ -1,0 +1,417 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.subcont {
+  height: 65vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.heading {
+  height: 20%;
+  width: 100%;
+  text-align: center;
+}
+.heading h1 {
+  font-size: 3rem;
+  color: #4cb4ff;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+}
+.heading h1 span {
+  font-size: 3rem;
+  color: #acb7ff;
+}
+.description {
+  font-size: 1.4rem;
+  padding: 2%;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  color: #ff8d94;
+}
+.reviewitems {
+  width: 100%;
+  height: 90%;
+  padding-top: 3%;
+  padding-left: 2%;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+.reviewbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh !important;
+  color: rgb(49, 49, 49);
+  background: #ccccff;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.username {
+  color: #334198;
+}
+.subreview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 10px;
+  gap: 1%;
+  height: 50%;
+  margin: 0;
+  background-color: #6495ed;
+}
+.subreview span {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.reviewtext {
+  padding: 1%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  box-sizing: border-box;
+}
+
+.subreview img {
+  width: 32%;
+  height: 65%;
+  border-radius: 5rem;
+  position: relative;
+  box-shadow: 1px 1px 30px 1px #8a30ff;
+}
+
+.deleteicon {
+  width: 1.6rem !important;
+  position: absolute;
+  background-color: #eeeeee;
+  padding: 0.2rem;
+  cursor: pointer;
+  margin: 0.1rem;
+  border-radius: 2rem;
+  transition: 0.5;
+  z-index: 5;
+}
+.textparaofreview {
+  font-size: 1rem;
+}
+.deleteicon:hover {
+  background-color: rgb(240, 75, 75);
+}
+.readMoreButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(0, 83, 249);
+  padding: 0.3%;
+  margin: 0.1%;
+  font-size: 0.9em;
+  background: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+}
+
+.Contact {
+  height: 50vh;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  top:25vh;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+.myreviewgif {
+  height: 100%;
+  width: 55%;
+  padding-left: 8%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem;
+  opacity: 0.8;
+}
+.myreviewgif h1 {
+  font-size: 4.3rem;
+  letter-spacing: 10px;
+  font-weight: 700;
+}
+
+.contactbio {
+  background-image: linear-gradient(30deg, #ff606a, #d602d9);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 85%;
+  margin-top: 5%;
+  padding: 0.5%;
+  border-radius: 1rem;
+}
+
+.contactbio textarea::placeholder {
+  color: rgba(25, 13, 78, 0.858); /* Change to whatever color you prefer */
+  font-size: 0.5rem;
+  font-weight: 550;
+}
+.contactbio h2 {
+  color: rgba(25, 13, 78, 0.858);
+  font-size: 1.4rem;
+}
+
+textarea:focus {
+  outline: none;
+}
+textarea::placeholder {
+  font-size: 1.2rem !important;
+}
+.contactbio textarea {
+  width: 75%;
+  height: 100%;
+  padding: 1%;
+  border-radius: 0.3rem;
+  background-color: #ffffffbc;
+  color: rgba(25, 13, 78, 0.858);
+}
+.submtbtn {
+  padding: 0.55rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  border-radius: 0.8rem;
+  color: rgba(25, 13, 78, 0.858);
+  cursor: pointer;
+  background-color: rgba(89, 180, 192, 0.992);
+  width: 19%;
+  margin-bottom: 1%;
+}
+.submtbtn:hover {
+  box-shadow: 1px 1px 10px 2px rgba(25, 13, 78, 0.858);
+}
+
+.heading {
+  font-size: 4.5rem;
+}
+.uderline {
+  display: inline-block;
+  height: 0.3rem;
+  background-color: rgba(255, 1, 255, 0.907);
+  border-radius: 1rem;
+}
+.contactheadline {
+  width: 33rem;
+}
+.error {
+  color: rgb(231, 41, 41);
+  font-size: 0.8rem;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(66, 66, 66, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.modalContent {
+  background: rgb(255, 225, 225);
+  height: 25%;
+  width: 37%;
+  border-radius: 0.7rem;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.closeButton {
+  background-color: #cb5e81;
+  border: none;
+  padding: 1%;
+  width: 15%;
+  border-radius: 0.3rem;
+  color: rgb(255, 255, 255);
+  font-weight: 550;
+}
+.headingforreview {
+  color: rgb(7, 132, 105);
+  font-family: "Afacad Flux", sans-serif;
+}
+.textreviewtext {
+  font-size: 1rem;
+  color: rgb(210, 112, 0);
+}
+
+.tooglebtnreview{
+  padding: 1rem;
+  font-weight: 550;
+  background: transparent;
+  border: none;
+  border-radius: 0.8rem;
+  color: rgba(25, 13, 78, 0.858);
+  cursor: pointer;
+  background-color: rgba(89, 180, 192, 0.992);  
+}
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10%;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  .subcont {
+    height: 51vh;
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+    padding: 3%;
+   margin-top: 5%;
+  }
+  .Contact {
+    height: 45vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: none;
+  }
+
+  .heading {
+    height: 10%;
+    display: inline-block;
+  }
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+  .heading h1 span {
+    font-size: 1.5rem;
+  }
+  .myreviewgif {
+    display: none;
+  }
+
+  .reviewitems {
+    width: 100%;
+    height: 95%;
+    padding-top: 5%;
+    padding-left: 6.3%;
+    padding-right: 10%;
+    box-sizing: border-box;
+  }
+  .reviewbox {
+    height: 45vh !important;
+  }
+  .username {
+    color: #334198;
+  }
+  .subreview {
+    width: 100%;
+    right: 10px;
+    gap: 1%;
+    height: 50%;
+    margin: 0;
+    background-color: #6495ed;
+  }
+  .subreview span {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .reviewtext {
+    padding: 0.5%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    box-sizing: border-box;
+  }
+
+  .subreview img {
+    width: 30%;
+    height: 55%;
+    border-radius: 5rem;
+    right: 0px;
+    box-shadow: 1px 1px 30px 1px #8a30ff;
+  }
+
+  .contactbio {
+    gap: 0.2rem;
+    width: 95%;
+    height: 95%;
+    padding: 0.3rem;
+    border-radius: 1rem;
+  }
+  .contactbio h2 {
+    color: rgba(25, 13, 78, 0.858);
+    font-size: 1rem;
+  }
+
+  .contactbio textarea {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
+  }
+  .submtbtn {
+    padding: 0.2rem;
+    font-weight: 500;
+    border-radius: 0.3rem;
+  }
+  .modalContent {
+    width: 95%;
+  }
+  ::placeholder {
+    color: #eeeeee; /* Change to whatever color you prefer */
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .textpara {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .textparaofreview {
+    font-size: 0.9rem;
+  }
+  .textreviewtext {
+    font-size: 0.9rem;
+    color: rgb(210, 112, 0);
+  }
+}
+
+
+
