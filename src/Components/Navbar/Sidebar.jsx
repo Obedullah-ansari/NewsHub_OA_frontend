@@ -25,8 +25,8 @@ function Sidebar({ sidebar, onclick }) {
       animate={sidebar ? "open" : "closed"}
     >
       <div className={Styles.closebar}>
-        <a href="#">
-          <img style={{ width: "2.5rem" }} src={logo} alt="" /> NewsCafe
+        <a href="#" className={Styles.closebarlogo}>
+          <img style={{ width: "2.5rem" }}  src={logo} alt="" /> NewsHub
         </a>
         <span onClick={onclick}>
           <img style={{ width: "1.5rem" }} src={close} alt="" />

@@ -13,7 +13,7 @@ function Navbar({ idBtn, showfun, newstype, speakauto, offon }) {
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img style={{ width: "2.5rem" }} src={logo} alt="" /> NewsCafe
+            <img style={{ width: "2.5rem" }} src={logo} alt="" /> NewsHub
           </a>
           <button
             className="navbar-toggler"

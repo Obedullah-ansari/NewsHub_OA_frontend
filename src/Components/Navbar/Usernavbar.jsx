@@ -9,12 +9,9 @@ import trash from "../../assets/trash.png";
 import close from "../../assets/closeblack.png";
 import { useDispatch } from "react-redux";
 import defimg from "../../assets/user.png";
-// import { useSelector } from "react-redux";
+
 
 function Usernavbar() {
-  // const Auth = useSelector((state) => state);
-   
-  // console.log(Auth.update)
 
   const dispatch = useDispatch();
   const [userinfo, setuserinfo] = useState(false);
@@ -48,7 +45,7 @@ function Usernavbar() {
 
       try {
         const response = await fetch(
-          `http://localhost:4000/api/v1/auth/profile/${userId}`,
+          `${import.meta.env.VITE_API_URL}api/v1/auth/profile/${userId}`,
           {
             method: "GET",
             headers: {
@@ -65,7 +62,7 @@ function Usernavbar() {
         const userPhoto =
           data.data.user.photo === "default.jpg"
             ? defimg
-            : `http://localhost:4000/uploads/users/${data.data.user.photo}`;
+            : `${import.meta.env.VITE_API_URL}uploads/users/${data.data.user.photo}`;
 
         setUserDetails({
           image: userPhoto,
@@ -82,14 +79,13 @@ function Usernavbar() {
 
   const handleImageUpload = async () => {
     const token = localStorage.getItem("token");
-
     try {
       const croppedImage = await getCroppedImg(selectedFile, croppedAreaPixels);
       const formData = new FormData();
       formData.append("photo", croppedImage);
 
       const response = await fetch(
-        "http://localhost:4000/api/v1/auth/updateProfile",
+        `${import.meta.env.VITE_API_URL}api/v1/auth/updateProfile`,
         {
           method: "PATCH",
           headers: {
@@ -103,7 +99,7 @@ function Usernavbar() {
         const updatedData = await response.json();
         setUserDetails((prevDetails) => ({
           ...prevDetails,
-          image: `http://localhost:4000/uploads/users/${updatedData.data.user.photo}`,
+          image: `${import.meta.env.VITE_API_URL}uploads/users/${updatedData.data.user.photo}`,
         }));
         console.log("Profile photo updated successfully");
         dispatch({ type: "updateprofilephoto" });
@@ -140,7 +136,7 @@ function Usernavbar() {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/api/v1/auth/deletePhoto",
+        `${import.meta.env.VITE_API_URL}api/v1/auth/deletePhoto`,
         {
           method: "DELETE",
           headers: {

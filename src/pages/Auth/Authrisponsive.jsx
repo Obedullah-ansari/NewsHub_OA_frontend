@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Styles from "./SignupPage.module.css";
 import { useNavigate } from "react-router-dom";
-import { animate, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 
 function Authrisponsive() {
   const [isLogin, setIsLogin] = useState(false);
@@ -41,7 +41,7 @@ function Authrisponsive() {
 
     try {
       const response = await fetch(
-        `http://localhost:4000/api/v1/auth/${isLogin ? "login" : "signup"}`,
+        `${import.meta.env.VITE_API_URL}api/v1/auth/${isLogin ? "login" : "signup"}`,
         {
           method: "POST",
           headers: {
@@ -73,7 +73,7 @@ function Authrisponsive() {
   const handelforgetpassword = async () => {
     try {
       const response = await fetch(
-        "http://localhost:4000/api/v1/auth/forgetpassword",
+        `${import.meta.env.VITE_API_URL}api/v1/auth/forgetpassword`,
         {
           method: "POST",
           headers: {

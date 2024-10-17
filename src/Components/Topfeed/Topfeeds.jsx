@@ -24,7 +24,7 @@ function Topfeeds() {
   useEffect(() => {
     const handelTopNews = async () => {
       const response = await fetch(
-        `http://localhost:4000/api/v1/headlines/topheadlines/${topNewsId}`,
+        `${import.meta.env.VITE_API_URL}api/v1/headlines/topheadlines/${topNewsId}`,
         {
           method: "GET",
         }

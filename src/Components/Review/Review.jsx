@@ -43,7 +43,7 @@ function Review() {
   };
 
   const validateReview = () => {
-    if (!Auth.Auth) {
+    if (!Auth) {
       setModalMessage(
         <p className={styles.messagep}>Please log in to submit a review 🔒</p>
       );
@@ -71,7 +71,7 @@ function Review() {
     async function fetchReviews() {
       try {
         const response = await fetch(
-          "http://localhost:4000/api/v1/auth/allreviews",
+          `${import.meta.env.VITE_API_URL}api/v1/auth/allreviews`,
           {
             method: "GET",
             headers: {
@@ -121,8 +121,8 @@ function Review() {
     }
     try {
       const url = userReviewExists
-        ? `http://localhost:4000/api/v1/auth/updateReview`
-        : "http://localhost:4000/api/v1/auth/review";
+        ? `${import.meta.env.VITE_API_URL}api/v1/auth/updateReview`
+        : `${import.meta.env.VITE_API_URL}api/v1/auth/review`;
       const method = userReviewExists ? "PATCH" : "POST";
 
       const response = await fetch(url, {
@@ -161,7 +161,7 @@ function Review() {
   async function handleDeleteReview() {
     try {
       const response = await fetch(
-        `http://localhost:4000/api/v1/auth/deleteReview`,
+        `${import.meta.env.VITE_API_URL}api/v1/auth/deleteReview`,
         {
           method: "DELETE",
           headers: {

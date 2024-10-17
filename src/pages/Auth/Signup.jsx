@@ -49,7 +49,7 @@ const Signup = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:4000/api/v1/auth/${isLogin ? "login" : "signup"}`,
+        `${import.meta.env.VITE_API_URL}api/v1/auth/${isLogin ? "login" : "signup"}`,
         {
           method: "POST",
           headers: {
@@ -88,7 +88,7 @@ const Signup = () => {
   const handelforgetpassword = async () => {
     try {
       const response = await fetch(
-        "http://localhost:4000/api/v1/auth/forgetpassword",
+        `${import.meta.env.VITE_API_URL}api/v1/auth/forgetpassword`,
         {
           method: "POST",
           headers: {

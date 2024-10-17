@@ -16,6 +16,15 @@ section {
   flex-wrap: wrap;
   overflow: auto;
 }
+.waitingdiv{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 .newsboxcontainer{
   width: 25%;
   height: 28%;
