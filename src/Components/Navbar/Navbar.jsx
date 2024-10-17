@@ -30,9 +30,9 @@ function Navbar() {
         />
 
         <div className={Styles.navbody}>
-          <a href="#" className={Styles.logoimage} >
+          <p href="#" className={Styles.logoimage} >
             <img style={{ width: "2.5rem" }} src={logo} alt="" /> NewsHub
-          </a>
+          </p>
           <a href="#hero">Home</a>
           <a href="#contact">Top Fives</a>
           <a href="#services">Services</a>

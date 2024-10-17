@@ -12,9 +12,9 @@ function Navbar({ idBtn, showfun, newstype, speakauto, offon }) {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <p className="navbar-brand" href="#">
             <img style={{ width: "2.5rem" }} src={logo} alt="" /> NewsHub
-          </a>
+          </p>
           <button
             className="navbar-toggler"
             type="button"

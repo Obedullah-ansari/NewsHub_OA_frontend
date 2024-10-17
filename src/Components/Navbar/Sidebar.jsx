@@ -25,9 +25,9 @@ function Sidebar({ sidebar, onclick }) {
       animate={sidebar ? "open" : "closed"}
     >
       <div className={Styles.closebar}>
-        <a href="#" className={Styles.closebarlogo}>
+        <p href="#" className={Styles.closebarlogo}>
           <img style={{ width: "2.5rem" }}  src={logo} alt="" /> NewsHub
-        </a>
+        </p>
         <span onClick={onclick}>
           <img style={{ width: "1.5rem" }} src={close} alt="" />
         </span>
@@ -42,7 +42,7 @@ function Sidebar({ sidebar, onclick }) {
         <a onClick={onclick} href="#services">
           Services
         </a>
-        {<Link to="/authorization">Login/signup</Link>}
+        {<Link to="/NewsHub_OA_frontend/authorization">Login/signup</Link>}
       </div>
     </motion.div>
   );

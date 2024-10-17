@@ -110,6 +110,7 @@ a:hover{
   padding: 2%;
   height: 10%;
   display: flex;
+  color: white;
   flex-direction: row;
   justify-content: space-between;
 }
