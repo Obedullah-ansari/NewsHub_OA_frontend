@@ -1,5 +1,5 @@
 {  
-  "homepage": "https://github.com/Obedullah-ansari/NewsHub_OA_frontend.git",
+  "homepage": "https://Obedullah-ansari.github.io/NewsHub_OA_frontend",
   "name": "newscafe",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@google-cloud/text-to-speech": "^5.5.0",
