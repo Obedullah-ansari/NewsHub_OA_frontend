@@ -1,7 +1,6 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
 }
 
 html, body {
@@ -10,7 +9,6 @@ html, body {
 }
 
 body {
-  touch-action: none;
   scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
   overflow-y: scroll; /* Allow vertical scrolling */
   scroll-behavior: smooth; /* Smooth scroll between sections */

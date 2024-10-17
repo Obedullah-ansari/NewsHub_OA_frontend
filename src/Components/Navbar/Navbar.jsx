@@ -36,7 +36,7 @@ function Navbar() {
           <a href="#hero">Home</a>
           <a href="#contact">Top Fives</a>
           <a href="#services">Services</a>
-          {<Link to="/authorization">Login/signup</Link>}
+          {<Link to="/NewsHub_OA_frontend/authorization">Login/signup</Link>}
         </div>
         <Sidebar sidebar={sidebar} onclick={handleSidebar} />
 
