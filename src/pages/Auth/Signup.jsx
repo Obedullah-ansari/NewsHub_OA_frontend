@@ -76,7 +76,7 @@ const Signup = () => {
           payload: data.userId || data.data.newUser._id,
         });
 
-        navigate("/");
+        navigate("/NewsHub_OA_frontend");
       } else {
         setError(data.message || "An error occurred, please try again."); // Set error from backend or default message
       }

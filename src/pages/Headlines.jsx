@@ -37,7 +37,7 @@ function Headlines({ id, showbtn, fun, newstypeupdate, speakauto }) {
         responsedata = await response.json();
         stopSpeaking();
         if (!response.ok) {
-          navigate("/authorization");
+          navigate("/NewsHub_OA_frontend/authorization");
           return;
         }
       }

@@ -56,7 +56,7 @@ function Card({ title,img, dec  }) {
          
          <p> {dec}  </p>
 
-         <Link to="/topheadlines"  className={Styles.herobtn} >Read </Link>
+         <Link to="/NewsHub_OA_frontend/topheadlines"  className={Styles.herobtn} >Read </Link>
       </motion.div>
     </motion.div>
   );

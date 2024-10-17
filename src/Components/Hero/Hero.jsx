@@ -123,7 +123,7 @@ function Hero() {
           <div className={styles.imgcontainer_new}>
             <img src={m2} alt="" />
           </div>
-            <Link  className={styles.btnnew} to="/topheadlines">
+            <Link  className={styles.btnnew} to="/NewsHub_OA_frontend/topheadlines">
               Read
             </Link>
         </div>

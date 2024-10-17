@@ -20,7 +20,7 @@ function Header() {
     const token = localStorage.getItem("token");
     if (token) setTodolist((prev) => !prev);
     else
-    navigate("/authorization")
+    navigate("/NewsHub_OA_frontend/authorization")
     
   };
 

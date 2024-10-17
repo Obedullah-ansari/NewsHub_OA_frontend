@@ -5,9 +5,9 @@ import Signup  from "./pages/Auth/Signup"
 
 
 const router = createBrowserRouter([
-  { path: "/", element: <Allapp /> },
-  { path: "/topheadlines", element: <Header /> },
-  {path :"/authorization", element : <Signup/>},
+  { path: "/NewsHub_OA_frontend", element: <Allapp /> },
+  { path: "/NewsHub_OA_frontend/topheadlines", element: <Header /> },
+  {path :"/NewsHub_OA_frontend/authorization", element : <Signup/>},
 
 ]);
 

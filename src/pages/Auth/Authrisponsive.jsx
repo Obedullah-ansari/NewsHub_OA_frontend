@@ -60,7 +60,7 @@ function Authrisponsive() {
         } else {
           localStorage.setItem("userId", data.data.newUser._id);
         }
-        navigate("/");
+        navigate("/NewsHub_OA_frontend");
       } else {
         // Set the error message if the response is not OK
         setError(data.message || "Something went wrong. Please try again.");
