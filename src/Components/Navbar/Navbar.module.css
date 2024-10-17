@@ -23,7 +23,7 @@ a {
   transition: 0.2s;
   color: rgb(255, 255, 255);
   padding: 0%;
- text-shadow: 1px 1px 10px rgb(124, 255, 242);
+ text-shadow: 1px 1px 20px rgb(124, 255, 242);
 }
 a:hover{
   scale: 1.1;

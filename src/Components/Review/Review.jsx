@@ -20,7 +20,7 @@ function Review() {
 
   const Auth = useSelector((state) => state.Auth);
   
-  console.log(updateInfoApp)
+
   
 
   const handelslidetoogle = () => {
@@ -84,7 +84,6 @@ function Review() {
 
         if (response.ok) {
           setUserReview(data.data);
-           console.log(userReview)
           if (Auth && userId) {
             const userExistingReview = data.data.find(
               (review) => review.user === userId
