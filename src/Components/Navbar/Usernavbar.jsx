@@ -45,7 +45,7 @@ function Usernavbar() {
 
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}api/v1/auth/profile/${userId}`,
+          `http://localhost:4000/api/v1/auth/profile/${userId}`,
           {
             method: "GET",
             headers: {
@@ -62,7 +62,7 @@ function Usernavbar() {
         const userPhoto =
           data.data.user.photo === "default.jpg"
             ? defimg
-            : `${import.meta.env.VITE_API_URL}uploads/users/${data.data.user.photo}`;
+            : `http://localhost:4000/uploads/users/${data.data.user.photo}`;
 
         setUserDetails({
           image: userPhoto,
@@ -85,7 +85,7 @@ function Usernavbar() {
       formData.append("photo", croppedImage);
 
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}api/v1/auth/updateProfile`,
+        `http://localhost:4000/api/v1/auth/updateProfile`,
         {
           method: "PATCH",
           headers: {
@@ -99,7 +99,7 @@ function Usernavbar() {
         const updatedData = await response.json();
         setUserDetails((prevDetails) => ({
           ...prevDetails,
-          image: `${import.meta.env.VITE_API_URL}uploads/users/${updatedData.data.user.photo}`,
+          image: `http://localhost:4000/uploads/users/${updatedData.data.user.photo}`,
         }));
         console.log("Profile photo updated successfully");
         dispatch({ type: "updateprofilephoto" });
@@ -136,7 +136,7 @@ function Usernavbar() {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}api/v1/auth/deletePhoto`,
+        `$http://localhost:4000/api/v1/auth/deletePhoto`,
         {
           method: "DELETE",
           headers: {

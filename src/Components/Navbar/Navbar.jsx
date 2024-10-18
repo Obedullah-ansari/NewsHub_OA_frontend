@@ -15,6 +15,8 @@ function Navbar() {
     setSidebar((prev) => !prev);
   };
 
+
+
   return (
     <>
       <div className={Styles.navcontiner}>

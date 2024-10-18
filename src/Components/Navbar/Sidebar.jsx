@@ -33,16 +33,16 @@ function Sidebar({ sidebar, onclick }) {
         </span>
       </div>
       <div className={Styles.smallnavabardata}>
-        <a onClick={onclick} href="#hero">
+        <a  className={Styles.sidelistbtn} onClick={onclick} href="#hero">
           Home
         </a>
-        <a onClick={onclick} href="#contact">
+        <a className={Styles.sidelistbtn} onClick={onclick} href="#contact">
           Top fives
         </a>
-        <a onClick={onclick} href="#services">
+        <a  className={Styles.sidelistbtn} onClick={onclick} href="#services">
           Services
         </a>
-        {<Link to="/NewsHub_OA_frontend/authorization">Login/signup</Link>}
+        {<Link className={Styles.sidelistbtn} to="/NewsHub_OA_frontend/authorization">Login/signup</Link>}
       </div>
     </motion.div>
   );

@@ -41,7 +41,7 @@ function Headlines({ id, showbtn, fun, newstypeupdate, speakauto }) {
           return;
         }
       }
-      
+
       setNewsHeadlines(responsedata);
       setLoading(false); // Stop loading
     }
@@ -53,13 +53,14 @@ function Headlines({ id, showbtn, fun, newstypeupdate, speakauto }) {
       const voices = synth.getVoices();
 
       // Log available voices for debugging
-      console.log("Available Voices: ", voices);
 
       // Attempt to find a preferred female Indian voice
       const preferredVoice =
-        voices.find((v) => v.name === "Rishi") || // Set to "Rishi" if available
-        voices.find((v) => v.lang.includes("en-IN")) || // Fallback to any Indian voice
-        voices[0]; // Fallback to the first available voice
+        voices.find((v) => v.name === "Rishi") || // First check for "Rishi"
+        voices.find((v) => v.lang.includes("en-IN")) || // Then check for Indian English
+        defaultEnglishVoice || // If none, fallback to any English voice
+        voices[0]; // Finally, fallback to the first available voice if no English voice found
+
       setVoice(preferredVoice);
     };
 
@@ -130,10 +131,9 @@ function Headlines({ id, showbtn, fun, newstypeupdate, speakauto }) {
         {loading ? ( // Check if loading
           <div className={Styles.waitingdiv}>
             <div className="spinner-border" role="status">
-              <span className="visually-hidden">
-              </span>
+              <span className="visually-hidden"></span>
             </div>
-            < p className={Styles.visually}>Loading...</p>
+            <p className={Styles.visually}>Loading...</p>
           </div>
         ) : (
           newsHeadlines.map((headlines, index) => (

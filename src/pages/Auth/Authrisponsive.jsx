@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Styles from "./SignupPage.module.css";
 import { useNavigate } from "react-router-dom";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
 
 function Authrisponsive() {
+  const dispatch = useDispatch();
   const [isLogin, setIsLogin] = useState(false);
   const [error, setError] = useState(null);
   const [forgeterror, setforgeterror] = useState("");
@@ -41,7 +43,9 @@ function Authrisponsive() {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}api/v1/auth/${isLogin ? "login" : "signup"}`,
+        `${import.meta.env.VITE_API_URL}api/v1/auth/${
+          isLogin ? "login" : "signup"
+        }`,
         {
           method: "POST",
           headers: {
@@ -55,12 +59,20 @@ function Authrisponsive() {
 
       if (response.ok) {
         localStorage.setItem("token", data.token);
-        if (isLogin) {
-          localStorage.setItem("userId", data.userId);
-        } else {
-          localStorage.setItem("userId", data.data.newUser._id);
-        }
-        navigate("/NewsHub_OA_frontend");
+        localStorage.setItem("token", data.token);
+        localStorage.setItem(
+          "userId",
+          isLogin ? data.userId : data.data.newUser._id
+        );
+        dispatch({
+          type: "Auth",
+          payload: data.token,
+        });
+        dispatch({
+          type: "User",
+          payload: data.userId || data.data.newUser._id,
+        });
+       navigate("/NewsHub_OA_frontend");
       } else {
         // Set the error message if the response is not OK
         setError(data.message || "Something went wrong. Please try again.");
@@ -122,7 +134,6 @@ function Authrisponsive() {
           </button>
         </motion.div>
         <motion.div className={Styles.backdiv}>
-
           <motion.div
             className={Styles.logintab}
             variants={variants}
