@@ -10,10 +10,8 @@ import close from "../../assets/closeblack.png";
 import { useDispatch } from "react-redux";
 import defimg from "../../assets/user.png";
 
-
 function Usernavbar() {
   const apiUrl = import.meta.env.VITE_API_URL;
-
 
   const dispatch = useDispatch();
   const [userinfo, setuserinfo] = useState(false);
@@ -46,15 +44,12 @@ function Usernavbar() {
       const userId = localStorage.getItem("userId");
 
       try {
-        const response = await fetch(
-          `${apiUrl}api/v1/auth/profile/${userId}`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const response = await fetch(`${apiUrl}api/v1/auth/profile/${userId}`, {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
         if (!response.ok) {
           throw new Error("Failed to fetch user data");
@@ -86,16 +81,13 @@ function Usernavbar() {
       const formData = new FormData();
       formData.append("photo", croppedImage);
 
-      const response = await fetch(
-        `${apiUrl}api/v1/auth/updateProfile`,
-        {
-          method: "PATCH",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-          body: formData,
-        }
-      );
+      const response = await fetch(`${apiUrl}api/v1/auth/updateProfile`, {
+        method: "PATCH",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: formData,
+      });
 
       if (response.ok) {
         const updatedData = await response.json();
@@ -202,7 +194,7 @@ function Usernavbar() {
             />
 
             <div className={Styles.userimginfo}>
-                <label
+              <label
                 htmlFor="file-upload"
                 className={Styles.customFileLabel}
                 onClick={
