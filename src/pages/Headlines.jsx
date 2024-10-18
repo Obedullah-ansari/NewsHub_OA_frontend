@@ -58,7 +58,7 @@ function Headlines({ id, showbtn, fun, newstypeupdate, speakauto }) {
       const preferredVoice =
         voices.find((v) => v.name === "Rishi") || // First check for "Rishi"
         voices.find((v) => v.lang.includes("en-IN")) || // Then check for Indian English
-        defaultEnglishVoice || // If none, fallback to any English voice
+        voices.find((v) => v.lang.includes("en-US")  )||
         voices[0]; // Finally, fallback to the first available voice if no English voice found
 
       setVoice(preferredVoice);

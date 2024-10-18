@@ -13,7 +13,7 @@ import defimg from "../../assets/user.png";
 
 function Usernavbar() {
   const apiUrl = import.meta.env.VITE_API_URL;
-  console.log(apiUrl)
+
 
   const dispatch = useDispatch();
   const [userinfo, setuserinfo] = useState(false);
