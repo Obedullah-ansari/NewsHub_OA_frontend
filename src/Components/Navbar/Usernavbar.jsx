@@ -25,7 +25,7 @@ function Usernavbar() {
   const [zoom, setZoom] = useState(1);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [error, setError] = useState(""); // Error state for handling file size issues
+  const [error, setError] = useState("");
 
   const fileInputRef = useRef(null);
 
@@ -36,7 +36,7 @@ function Usernavbar() {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
-    dispatch({ type: "Logout" });
+    dispatch({ type: "Logout" }); // Update the Auth state and localStorage
   };
 
   useEffect(() => {
@@ -67,6 +67,7 @@ function Usernavbar() {
           name: data.data.user.name,
           email: data.data.user.email,
         });
+        setError("")
       } catch (error) {
         console.error(error);
       }
@@ -118,9 +119,7 @@ function Usernavbar() {
       setError("File size exceeds 500KB. Please upload a smaller image.");
       return;
     }
-
     setSelectedFile(URL.createObjectURL(file));
-    setError(""); // Clear error if the file is valid
     setShowModal(true);
   };
 
@@ -224,6 +223,8 @@ function Usernavbar() {
               style={{ display: "none" }}
             />
             <div className={Styles.aboutuser}>
+            {error ?( <div className={Styles.errorMsg}>{error}</div>):""} 
+
               <span>
                 {" "}
                 <span>User </span>
@@ -234,6 +235,7 @@ function Usernavbar() {
                 {userDetails.email}
               </span>
             </div>
+
             <a href="#" onClick={handleLogout} className={Styles.logout}>
               Logout
             </a>
@@ -257,9 +259,6 @@ function Usernavbar() {
           />
         )}
       </div>
-
-      {error && <div className={Styles.errorMsg}>{error}</div>} {/* Display error */}
-
       {showModal && (
         <Model isOpen={showModal} onClose={() => setShowModal(false)}>
           <div className={Styles.cropContainer}>
