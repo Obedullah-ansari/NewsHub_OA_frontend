@@ -25,6 +25,7 @@ function Usernavbar() {
   const [zoom, setZoom] = useState(1);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [error, setError] = useState(""); // Error state for handling file size issues
 
   const fileInputRef = useRef(null);
 
@@ -35,7 +36,7 @@ function Usernavbar() {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
-    dispatch({ type: "Logout" }); // Update the Auth state and localStorage
+    dispatch({ type: "Logout" });
   };
 
   useEffect(() => {
@@ -111,7 +112,15 @@ function Usernavbar() {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
+
+    // Check if file size is more than 500KB (500 * 1024 = 512000 bytes)
+    if (file && file.size > 512000) {
+      setError("File size exceeds 500KB. Please upload a smaller image.");
+      return;
+    }
+
     setSelectedFile(URL.createObjectURL(file));
+    setError(""); // Clear error if the file is valid
     setShowModal(true);
   };
 
@@ -248,6 +257,9 @@ function Usernavbar() {
           />
         )}
       </div>
+
+      {error && <div className={Styles.errorMsg}>{error}</div>} {/* Display error */}
+
       {showModal && (
         <Model isOpen={showModal} onClose={() => setShowModal(false)}>
           <div className={Styles.cropContainer}>

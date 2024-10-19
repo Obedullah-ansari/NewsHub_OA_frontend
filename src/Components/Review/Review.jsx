@@ -19,9 +19,6 @@ function Review() {
   const [tooglebtnreview, settooglebtnreview] = useState(false);
 
   const Auth = useSelector((state) => state.Auth);
-  
-
-  
 
   const handelslidetoogle = () => {
     settooglebtnreview((prev) => !prev);
@@ -95,12 +92,12 @@ function Review() {
                 rating: userExistingReview.rating,
               });
             }
-          }else{
+          } else {
             setUserReviewExists(false);
-              setUserData({
-                review: "",
-                rating: "",
-              });
+            setUserData({
+              review: "",
+              rating: "",
+            });
           }
         } else {
           console.error(`Failed to fetch reviews: ${data.message}`);

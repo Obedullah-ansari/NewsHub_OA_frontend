@@ -97,7 +97,7 @@ function Listitem({ info, deletefun }) {
           const userImageSrc =
             review.photo === "default.jpg"
               ? defaultUserImg
-              : `http://localhost:4000/uploads/users/${review.photo}`;
+              : `${import.meta.env.VITE_API_URL}uploads/users/${review.photo}`;
 
           // Check if the review is expanded and define short text length
           const isExpanded = expanded[index];
