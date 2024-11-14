@@ -63,7 +63,7 @@ function Listitem({ info, deletefun }) {
       },
     },
     animate: {
-      y: "-65%",
+      y: "-45%",
       zIdex: 3,
       transition: {
         duration: 0.4,
@@ -95,7 +95,7 @@ function Listitem({ info, deletefun }) {
 
           // Conditional image source
           const userImageSrc =
-            review.photo === "default.jpg"
+            review.photo === "default.jpg" 
               ? defaultUserImg
               : `${import.meta.env.VITE_API_URL}uploads/users/${review.photo}`;
 

@@ -187,7 +187,7 @@ function Usernavbar() {
 
   return (
     <>
-      <div className={Styles.userinfoconatiner}>
+     
         <motion.div
           className={Styles.userinfo}
           variants={variants}
@@ -258,7 +258,7 @@ function Usernavbar() {
             onClick={handleuserinfo}
           />
         )}
-      </div>
+   
       {showModal && (
         <Model isOpen={showModal} onClose={() => setShowModal(false)}>
           <div className={Styles.cropContainer}>
